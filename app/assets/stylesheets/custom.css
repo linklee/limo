@@ -1,5 +1,27 @@
+/* font-family: "SegoeUIRegular"; */
+@font-face {
+    font-family: "SegoeUIRegular";
+    src: url("/assets/fonts/SegoeUIRegular/SegoeUIRegular.eot");
+    src: url("/assets/fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
+    url("/assets/fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"),
+    url("/assets/fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "OpenSansRegular"; */
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url("/assets/fonts/OpenSansRegular/OpenSansRegular.eot");
+    src: url("/assets/fonts/OpenSansRegular/OpenSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("/assets/fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"),
+    url("/assets/fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;colorr: #000;
+	font-family: "OpenSansRegular";colorr: #000;
+/*Helvetica Neue*/
 }
 .phone {
 	margin-top: 10px;
