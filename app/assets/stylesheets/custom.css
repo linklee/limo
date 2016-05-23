@@ -1,0 +1,159 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;colorr: #000;
+}
+.phone {
+	margin-top: 10px;
+	margin-right: 30px;
+	color: white;
+}
+.hidden {
+	display: none;
+}
+.navbar-nav {
+	font-size: 24px;	
+}
+.navbar-default .navbar-nav > li > a {
+	color: white;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	color: white;
+	background-color: transparent;
+}
+.logo {
+	font-size: 33px;font-weight: bold;
+	color: white;
+}
+.logo:hover {
+	text-decoration: none;    color: white;;margin-top: 5px
+}
+.nav-center {
+	margin:0;
+	float:none;
+	display: inline-block;
+}
+
+.navbar-inner{
+	text-align:center;
+}
+.main-header {
+	text-align: center;
+}
+.under-logo {
+	font-size: 23px;position: absolute;margin-top: 30px;
+}
+.dropdown-menu {
+	text-align: left;
+}
+.services-menu {
+	list-style-type:none;
+	font-size: 25px;
+	text-align: center;
+
+}
+.services-menu > li {
+	display: inline;
+	margin-right: 30px;
+}
+.services-menu > li > a {
+	color:black;
+}
+.active-service {
+	padding-bottom:8px;
+	background: transparent;
+	border-bottom: 3px solid blue; /* decide on this as some stage */
+	/* color: #494949; decide on this as some stage */
+	text-decoration: none;
+}
+.services-menu > li :hover {
+	text-decoration: none;
+}
+h1 {
+	text-align: center;
+}
+.prop-table {
+	margin-top: 50px;
+}
+.img-wrap {overflow: hidden;min-height: 300px}
+.img-wrap > img {
+}
+.book-button {
+	width: 250px;
+}
+
+.fair-estimate-button {
+	width: 250px;
+}
+
+.product-wrap {
+	height: 270px;
+}
+.small-img-wrap >  a >img{
+	max-height: 200px;
+}
+.small-img-wrap {
+	height:170px;overflow: hidden
+}
+.thumbnail  {
+	border:none;
+}
+.caption {
+	text-align: center;
+}
+.product-text {
+	
+	margin-top: 10px
+}
+.product-text > a {
+	width:150px;
+}
+.limo-img {
+	margin-top: 20px;
+}
+.bold, .thumbnail{
+	font-weight: bold
+}
+.map {
+	width:500px;height:380px; 
+}
+
+.left-align {
+	text-align: left;
+}
+.limo-img-big{
+	margin-top: 70px
+}
+.btn-book-page {
+	min-width: 350px;
+}
+.book-form  > input,.select {
+	min-width: 350px;
+}
+.select-button {
+	text-align: left
+}
+.book-form {
+	text-align: left;
+}
+
+.simple-book {
+	max-width: 200px;display: inline
+}
+.or-span {
+	margin: 0 20px;
+}
+.simple-book {
+	margin-right:10px; 
+}
+
+.inline {
+	display: inline
+}
+.breadcrumb {
+	display: none;
+}
+.show-b {
+	display: block;
+}
+a.up:first-letter {
+    text-transform: uppercase;
+}

@@ -1,0 +1,22 @@
+<div class="row book-form-wrap">
+	<h1 class="left-align"> Enter details below </h1>
+	<%= form_tag "/", :method => :get, :class => "form-inline book-form" do %>
+	<br><br>
+	<span class="bold"> Name</span><br>
+	<%= text_field_tag :name, "", class: 'form-control', placeholder: 'name'  %><br><br>
+	<span class="bold"> Phone</span><br>
+	<%= text_field_tag :phone, "", class: 'form-control', placeholder: 'phone'  %>
+	<br><br>
+
+	
+	<span class="bold"> Number of hours</span><br>
+	<%= text_field_tag :phone, "",type:"number", class: 'form-control', placeholder: 'Number of passengers' %>
+	<br><br>
+	<button class="btn btn-primary btn-book-page" type="submit" value ="search"> Book</button>
+
+	<!--hidden inputs-->
+
+	<!--%= submit_tag "поиск", class: "btn btn-small btn-primary" %-->
+
+	<%end%>
+</div>
