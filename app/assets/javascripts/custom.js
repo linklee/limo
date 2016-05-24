@@ -1,7 +1,7 @@
 var ready;
 ready = function() {
 
-$(".select-book").change(function(){
+$(".select-book-type").change(function(){
 	var term = $(this).val();
 	//hide all inputs
 	$('.drop-off-wrap').addClass('hidden');
