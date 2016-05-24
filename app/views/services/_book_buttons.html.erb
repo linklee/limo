@@ -1,14 +1,11 @@
 
 <center>
 
-	<%= form_tag "/", :method => :get, :class => "form-inline " do %>
-	<br><br>
-	<%= text_field_tag :name, "", class: 'form-control simple-book simple-book-name',placeholder: 'name' %>
-	<%= text_field_tag :phone, "", class: 'form-control simple-book', placeholder: 'phone' ,required: 'true' %>
-	<button href = "/" class=" btn btn-primary  book-button" type="submit" value ="book">BOOK </button> <span class="or-span">    or   </span>
-	<%= text_field_tag :page, "", class: 'form-control hidden', placeholder: 'phone' ,required: 'true' %>
-	<a href = "/fair-estimate?page=<%=@page%>&url=<%=request.original_fullpath%>" class="   fair-estimate-button" type="submit" value ="fair estimate">GET FAIR ESTIMATE </a>
-	<%end%>
+
+	<a href = "/book?page=<%=@page%>&url=<%=request.original_fullpath%>" class="   btn btn-primary fair-estimate-button" type="submit" value ="fair estimate">Book now </a>
+
+	<a href = "/fair-estimate?page=<%=@page%>&url=<%=request.original_fullpath%>" class=" btn btn-primary  fair-estimate-button" type="submit" value ="fair estimate">GET FAIR ESTIMATE </a>
+
 
 </center>
 

@@ -8,5 +8,40 @@
 			max-width: 100%;display: block;
 			margin-bottom: 10px;
 		}
+		.book-input{
+			margin-bottom: 10px;
+		}
+		.btn-book-page {
+			width:100%;
+		}
+		.fair-estimate-button {
+			margin-top:10px;
+		}
+	}
+
+	@media (min-width: 800px) {
+		.book-input-wrap{
+			margin-right: 20px;
+		}
+		.book-input{
+			margin-bottom: 10px;
+			width: 200px!important;
+		}
+		.select-book {
+		
+		}
+		.boo-time {
+			width:65px!important;
+		}
+		.boo-time-select {
+			width:70px!important;
+		}
+		.btn-book-page {
+			width:420px;
+		}
+		.fair-estimate-button {
+			margin-left:50px;
+		}
+
 	}
 	

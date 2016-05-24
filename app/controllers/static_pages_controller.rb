@@ -10,6 +10,10 @@ end
 def book 
 
 end
+def rv 
+  @page = "rv"
+  render "services/_rv"
+end
 def estimate 
 
 end

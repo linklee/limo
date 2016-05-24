@@ -60,6 +60,8 @@ Rails.application.routes.draw do
   get 'limo' => 'static_pages#limo'
   get 'classic' => 'static_pages#classic'
   get 'hummer' => 'static_pages#hummer'
+  get 'rv' => 'static_pages#rv'
+
   get 'party-bus' => 'static_pages#bus'
   get 'classic-wedding' => 'static_pages#classic'
   get 'book' => 'static_pages#book'
