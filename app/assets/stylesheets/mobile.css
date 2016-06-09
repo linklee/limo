@@ -21,6 +21,9 @@
 			display:none!important;
     	}
     	.breadcrumb {display: block!important}
+    	h4 {
+    		white-space: normal
+    	}
 	}
 
 	@media (min-width: 800px) {
