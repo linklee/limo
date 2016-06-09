@@ -24,6 +24,9 @@
     	h4 {
     		white-space: normal
     	}
+    	.small-img-wrap {
+			height:170px;
+		}
 	}
 
 	@media (min-width: 800px) {
