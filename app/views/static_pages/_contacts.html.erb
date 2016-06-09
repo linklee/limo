@@ -10,7 +10,7 @@ src="https://maps.googleapis.com/maps/api/js">
 		<div class="col-md-6">
 
 			<p class="bold hidden"> Location</p>
-			<p class="hidden">4557 Fountain Ave.Los Angeles Ca 90029 </p>
+			<p class="hidden">400 Paula ave unit 320 Glendale California 91201</p>
 			<div id="googleMap" class="map"></div>
 		</div>
 		<div class="col-md-6">
@@ -20,33 +20,11 @@ src="https://maps.googleapis.com/maps/api/js">
 			<p class="left-align">
 			<b>phone:</b> 818-844-7529<br>
 			<b>email:</b> edwineyvazian@gmail.com<br>
-			<b>location:</b> 4557 Fountain Ave.Los Angeles Ca 90029 
+			<b>location:</b> 400 Paula ave unit 320 Glendale California 91201 
 			</p>
 		</div>
 	</center>
 </div>
 <script>
 
-	var myCenter=new google.maps.LatLng(34.0960319,-118.2903576,17);
-	function initialize()
-	{
-		var mapProp = {
-			center:myCenter,
-			zoom:14,
-			mapTypeId:google.maps.MapTypeId.ROADMAP,
-			scrollwheel: false
-
-		};
-
-		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-
-		var marker=new google.maps.Marker({
-			position:myCenter,
-		});
-
-		marker.setMap(map);
-	}
-
-	google.maps.event.addDomListener(window, 'load', initialize);
 </script>

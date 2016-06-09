@@ -8,7 +8,7 @@
     font-style: normal;
     font-weight: normal;
 }
-/* font-family: "OpenSansRegular"; */
+/* font-family: "OpenSansRegular"; 
 @font-face {
     font-family: "OpenSansRegular";
     src: url("/assets/fonts/OpenSansRegular/OpenSansRegular.eot");
@@ -17,11 +17,11 @@
     url("/assets/fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
-}
+}*/
 
 body {
+	/*Helvetica Neue*/
 	font-family: "SegoeUIRegular", Helvetica, Arial, sans-serif;colorr: #000;
-/*Helvetica Neue*/
 }
 .phone {
 	margin-top: 10px;
@@ -107,13 +107,13 @@ h1 {
 }
 
 .product-wrap {
-	height: 270px;
+	height: 300px;
 }
 .small-img-wrap >  a >img{
-	max-height: 200px;
+	max-height: 190px;
 }
 .small-img-wrap {
-	height:170px;overflow: hidden
+	height:190px;overflow: hidden
 }
 .thumbnail  {
 	border:none;
@@ -142,7 +142,7 @@ h1 {
 	text-align: left;
 }
 .limo-img-big{
-	margin-top: 70px
+	margin-top: 50px
 }
 .btn-book-page {
 	min-width: 350px;
@@ -178,4 +178,27 @@ h1 {
 }
 a.up:first-letter {
     text-transform: uppercase;
+}
+h4  {
+	font-size:23px;
+}
+.call-estimate > b{
+	font-size:21px;
+}
+h4 > b {
+	/*display: block;*/
+}
+
+h4 {
+  white-space:nowrap;
+}
+h4 > a{
+	font-size:18px;
+}
+.price-table {
+	font-size:20px;
+	font-weight: bold
+}
+.padding-top {
+	padding-top: 25px;
 }
