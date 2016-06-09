@@ -17,9 +17,10 @@
 		.fair-estimate-button {
 			margin-top:10px;
 		}
-		.services-menu > li {
-			display:block!important;
+		.services-menu  {
+			display:none!important;
     	}
+    	.breadcrumb {display: block!important}
 	}
 
 	@media (min-width: 800px) {
