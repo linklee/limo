@@ -66,6 +66,7 @@ Rails.application.routes.draw do
   get 'classic-wedding' => 'static_pages#classic'
   get 'book' => 'static_pages#book'
   get 'fair-estimate' => 'static_pages#estimate'
-
-
+  get 'payment' => 'static_pages#payment'
+  post 'checkout' => 'static_pages#checkout'
+  get 'success' => 'static_pages#success'
 end

@@ -42,5 +42,30 @@ def classic
   @page = "wedding"
   render "services/_classic"
 end
+def payment 
+  @client_token = Braintree::ClientToken.generate
+  render "payment/_form"
+end
 
-end#end of class
+def checkout
+  nonce = params[:payment_method_nonce]
+  render action: :payment and return unless nonce
+  result = Braintree::Transaction.sale(
+    amount: "33.00",
+    payment_method_nonce: nonce
+    )
+  if result.success?
+    flash[:notice] = "Sale successful." 
+    redirect_to "/success"
+  else 
+    flash[:alert] = "Something is wrong. #{result.transaction.processor_response_text}"
+    payment
+  end
+#end checkout function
+end
+
+def success 
+  render "payment/success"
+end
+#end of class
+end
