@@ -27,6 +27,7 @@ gem "rest-client"
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'nokogiri'
+gem 'braintree'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
