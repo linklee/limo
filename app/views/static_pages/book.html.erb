@@ -65,6 +65,9 @@
 
 				</select>
 			</div>
+			<div class="col-md-2 book-hour-wrap hidden">
+			<%= text_field_tag :phone, "",type:"date", class: 'form-control book-input', placeholder: 'date' %>
+			</div>
 			<div class="col-md-2 book-input-wrap">
 				<%= text_field_tag :phone, "",type:"number", class: 'form-control book-input', placeholder: 'Number of stops' %><br><br>
 			</div>
@@ -77,8 +80,6 @@
 			</div>
 			<div class="col-md-3 book-input-wrap">
 				<span > Pickup-up time</span><br>
-
-
 
 				<%= text_field_tag :phone, "",type:"number", class: 'form-control book-input boo-time', placeholder: 'HH' %>
 				<%= text_field_tag :phone, "",type:"number", class: 'form-control book-input boo-time', placeholder: 'MM' %>

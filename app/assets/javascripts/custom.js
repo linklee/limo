@@ -22,7 +22,7 @@ ready = function() {
 		$('.pick-up-wrap').removeClass('hidden');
 	}
 	if (term === 'Book by the Hour') {
-
+		$('.book-hour-wrap').toogleClass('hidden');
 	}
 	if (term === 'Address to Address One Way') {
 		$('.drop-off-wrap').removeClass('hidden');
