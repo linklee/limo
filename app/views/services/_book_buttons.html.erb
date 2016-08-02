@@ -1,6 +1,6 @@
 
 <center>
-	<%= form_tag "/book", :method => :post, :class => "form-inline book-form" do %>
+	<%= form_tag "/book", :method => :get, :class => "form-inline book-form" do %>
 		<%=select_tag "colors", "<option>0-10 miles</option><option>11-25 miles</option><option>26-30 miles</option>".html_safe, :class=> 'form-control price-select'%>
 		<%= text_field_tag :url, "", class: 'form-control ', value: request.original_fullpath %>
 		<%= text_field_tag :page, "", class: 'form-control ', value: @page %>
