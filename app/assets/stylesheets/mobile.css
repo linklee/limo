@@ -57,6 +57,7 @@
 		}
 		.price-select {
 			max-width:250px;
+			display: inline;
 		}
 
 	}
