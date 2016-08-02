@@ -62,8 +62,8 @@
 			margin-right: 8px;
 		}
 		.price-select-input {
-			max-width:125px;
-			min-width: 125px;
+			max-width:125px!important;
+			min-width: 0px!important;
 		}
 
 	}
