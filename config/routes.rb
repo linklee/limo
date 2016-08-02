@@ -70,4 +70,6 @@ Rails.application.routes.draw do
   post 'checkout' => 'static_pages#checkout'
   get 'success' => 'static_pages#success'
   get 'checkout_bus' => 'static_pages#checkout_bus'
+  get 'checkout_bus' => 'static_pages#checkout_bus'
+
 end
