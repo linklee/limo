@@ -9,6 +9,9 @@ def sedan
 end
 def book 
   @client_token = Braintree::ClientToken.generate
+  if params['page'] == 'suv'
+    params['price'] = params['price'].to_i * 49 
+  end
 
 end
 def rv 
