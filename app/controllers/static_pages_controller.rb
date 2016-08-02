@@ -76,7 +76,7 @@ def checkout
   end
 #end checkout function
 end
-def save_client 
+def checkout_bus 
     render "payment/success"
 end
 def success 
