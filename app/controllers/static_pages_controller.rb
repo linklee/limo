@@ -60,12 +60,12 @@ def checkout
   
   nonce = params[:payment_method_nonce]
   render action: :payment and return unless nonce
-  redirect_to "/success"
-  return
   result = Braintree::Transaction.sale(
     amount: 11,
     payment_method_nonce: nonce
     )
+  redirect_to "/success"
+  return
   if result.success?
     flash[:notice] = "Sale successful." 
     redirect_to "/success"
