@@ -8,6 +8,9 @@ def sedan
   render "services/_sedan"
 end
 def book 
+  if params['page'] == 'bus'
+    render "static_pages/book_bus"
+  end
   @client_token = Braintree::ClientToken.generate
   if params['page'] == 'sedan'
     params['price'] = params['price'].to_i * 49 
