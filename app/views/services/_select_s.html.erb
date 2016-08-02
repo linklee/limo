@@ -1,3 +1,4 @@
+<%=@page%>
 <% if @page == "suv"%>
 <!--suv-->
 <%=select_tag "price", "<option value='65'>0-10 miles</option><option value='75'>11-25 miles</option><option value='89'>26-30 miles</option>".html_safe, :class=> 'form-control price-select'%>
