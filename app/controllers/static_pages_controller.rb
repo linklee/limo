@@ -64,12 +64,13 @@ def checkout
     amount: 11,
     payment_method_nonce: nonce
     )
-  redirect_to "/success"
-  return
+
   if result.success?
     flash[:notice] = "Sale successful." 
     redirect_to "/success"
   else 
+    redirect_to "/success"
+    return
     flash[:alert] = "Something is wrong. #{result.transaction.processor_response_text}"
     payment
   end
