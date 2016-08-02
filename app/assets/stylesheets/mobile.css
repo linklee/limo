@@ -58,6 +58,7 @@
 		.price-select {
 			max-width:250px;
 			display: inline;
+			margin-left: 15px;
 		}
 
 	}
