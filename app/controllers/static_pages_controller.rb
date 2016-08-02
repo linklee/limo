@@ -9,7 +9,7 @@ def sedan
 end
 def book 
   @client_token = Braintree::ClientToken.generate
-  if params['page'] == 'suv'
+  if params['page'] == 'sedan'
     params['price'] = params['price'].to_i * 49 
   end
   if params['page'] == 'bus'
