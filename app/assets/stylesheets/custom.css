@@ -225,3 +225,6 @@ h5 {
 .book-form {
 	text-align: center;
 }
+.payment-form {
+	max-width: 600px;
+}
