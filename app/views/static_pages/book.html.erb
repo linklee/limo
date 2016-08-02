@@ -88,35 +88,38 @@
 			</div>
 		</div>
 		<br>
-		<div id="payment-form" class="payment-form"></div><br>
-		<b>Total: $<%=params['price']%></b><br><br>
-		<button class="btn btn-primary btn-book-page" type="submit" value ="search"> Book now</button>
+		<%if @show_brain_tree != false%>
+				<div id="payment-form" class="payment-form"></div><br>
+				<b>Total: $<%=params['price']%></b><br><br>
+				<button class="btn btn-primary btn-book-page" type="submit" value ="search"> Book now</button>
 
-		<!--hidden inputs-->
+				<!--hidden inputs-->
 
-		<!--%= submit_tag "поиск", class: "btn btn-small btn-primary" %-->
+				<!--%= submit_tag "поиск", class: "btn btn-small btn-primary" %-->
 
+				<%end%>
+
+				<% if !flash.empty? %>
+					<div id="flash"> 
+				    <% flash.keys.each do |k| %> 
+				      <div class="<%= k %>">
+				        <%= flash[k] %>
+				      </div>  
+				    <% end %>   
+					</div>
+				<% end %>   
+
+
+		<script src="https://js.braintreegateway.com/js/braintree-2.27.0.min.js"></script>
+		<script>
+		// We generated a client token for you so you can test out this code
+		// immediately. In a production-ready integration, you will need to
+		// generate a client token on your server (see section below).
+		var clientToken = '<%=@client_token%>';
+
+		braintree.setup(clientToken, "dropin", {
+		  container: "payment-form"
+		});
+		</script>
 		<%end%>
-
-		<% if !flash.empty? %>
-			<div id="flash"> 
-		    <% flash.keys.each do |k| %> 
-		      <div class="<%= k %>">
-		        <%= flash[k] %>
-		      </div>  
-		    <% end %>   
-			</div>
-		<% end %>   
 </div>
-
-<script src="https://js.braintreegateway.com/js/braintree-2.27.0.min.js"></script>
-<script>
-// We generated a client token for you so you can test out this code
-// immediately. In a production-ready integration, you will need to
-// generate a client token on your server (see section below).
-var clientToken = '<%=@client_token%>';
-
-braintree.setup(clientToken, "dropin", {
-  container: "payment-form"
-});
-</script>

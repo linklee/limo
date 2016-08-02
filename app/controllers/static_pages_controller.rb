@@ -12,7 +12,9 @@ def book
   if params['page'] == 'suv'
     params['price'] = params['price'].to_i * 49 
   end
-
+  if params['page'] == 'bus'
+    @show_brain_tree = false 
+  end
 end
 def rv 
   @page = "rv"
