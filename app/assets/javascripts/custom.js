@@ -7,6 +7,7 @@ ready = function() {
 	$('.drop-off-wrap').addClass('hidden');
 	$('.pick-up-wrap').addClass('hidden');
 	$('.airport-wrap').addClass('hidden');
+	$('.book-hour-wrap').addClass('hidden');
 	//show inputs we need
 	if (term === 'Pickup from Airport') {
 		$('.airport-wrap').removeClass('hidden');
@@ -22,7 +23,7 @@ ready = function() {
 		$('.pick-up-wrap').removeClass('hidden');
 	}
 	if (term === 'Book by the Hour') {
-		$('.book-hour-wrap').toggleClass('hidden');
+		$('.book-hour-wrap').removeClass('hidden');
 	}
 	if (term === 'Address to Address One Way') {
 		$('.drop-off-wrap').removeClass('hidden');
