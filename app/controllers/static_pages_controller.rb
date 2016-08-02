@@ -69,7 +69,7 @@ def checkout
     flash[:notice] = "Sale successful." 
     redirect_to "/success"
   else 
-    redirect_to "/success?wrong"
+    redirect_to "/"
     return
     flash[:alert] = "Something is wrong. #{result.transaction.processor_response_text}"
     payment
