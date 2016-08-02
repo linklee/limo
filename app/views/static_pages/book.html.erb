@@ -7,12 +7,11 @@
 			<li>Book</li>      
 		</ol>
 		<h1 class="left-align"> Enter details below </h1>
-		<%=if params['page'] == 'bus'
-		
-		 form_tag "/save_client", :method => :get, :class => "form-inline book-form" 
-		 else 
-		 form_tag "/checkout", :method => :post, :class => "form-inline book-form" 	%>
-
+		<%if params['page'] == 'bus'%>
+		 <%=form_tag "/save_client", :method => :get, :class => "form-inline book-form" %>
+		 <%else%> 
+		 <%=form_tag "/checkout", :method => :post, :class => "form-inline book-form" 	%>
+		 <end%>
 		 <% do %>
 		<br><br>
 		<div class = "row">
