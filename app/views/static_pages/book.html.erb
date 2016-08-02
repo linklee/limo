@@ -7,7 +7,7 @@
 			<li>Book</li>      
 		</ol>
 		<h1 class="left-align"> Enter details below </h1>
-		<%= form_tag "/", :method => :get, :class => "form-inline book-form" do %>
+		<%= form_tag "/checkout", :method => :post, :class => "form-inline book-form" do %>
 		<br><br>
 		<div class = "row">
 			<div class="col-md-2 book-input-wrap">
@@ -89,7 +89,7 @@
 			</div>
 		</div>
 
-
+		<div id="payment-form"></div>
 
 		<button class="btn btn-primary btn-book-page" type="submit" value ="search"> Book</button>
 
