@@ -23,6 +23,7 @@ ready = function() {
 		$('.pick-up-wrap').removeClass('hidden');
 	}
 	if (term === 'Book by the Hour') {
+		alert(1);
 		$('.book-hour-wrap').removeClass('hidden');
 	}
 	if (term === 'Address to Address One Way') {
