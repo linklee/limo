@@ -61,7 +61,7 @@ def checkout
   nonce = params[:payment_method_nonce]
   render action: :payment and return unless nonce
   result = Braintree::Transaction.sale(
-    amount: "33.00",
+    amount: params['price'],
     payment_method_nonce: nonce
     )
   if result.success?
