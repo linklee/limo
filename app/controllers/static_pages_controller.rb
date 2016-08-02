@@ -57,10 +57,6 @@ def payment
 end
 
 def checkout
-  if params['page'] == 'bus'
-    redirect_to "/success"
-    return
-  end
   nonce = params[:payment_method_nonce]
   render action: :payment and return unless nonce
   result = Braintree::Transaction.sale(
