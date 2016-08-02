@@ -8,6 +8,7 @@ def sedan
   render "services/_sedan"
 end
 def book 
+  @client_token = Braintree::ClientToken.generate
 
 end
 def rv 
