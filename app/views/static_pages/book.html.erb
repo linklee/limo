@@ -90,6 +90,7 @@
 		</div>
 		<br>
 		<%if @show_brain_tree != false%>
+			<%= text_field_tag :price, "",type:"number", class: 'form-control book-input boo-time', value: params['price'] %>
 				<div id="payment-form" class="payment-form"></div><br>
 				<b>Total: $<%=params['price']%></b><br><br>
 		<%end%>		
