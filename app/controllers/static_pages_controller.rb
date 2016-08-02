@@ -38,7 +38,7 @@ def limo
   render "services/_limo"
 end
 def hummer 
-  @page= "Luxury Mersedes Van"
+  @page= "7 passenger Van"
   render "services/_hummer"
 end
 
