@@ -91,6 +91,7 @@
 		<%if @show_brain_tree != false%>
 				<div id="payment-form" class="payment-form"></div><br>
 				<b>Total: $<%=params['price']%></b><br><br>
+		<%end%>		
 				<button class="btn btn-primary btn-book-page" type="submit" value ="search"> Book now</button>
 
 				<!--hidden inputs-->
@@ -109,17 +110,17 @@
 					</div>
 				<% end %>   
 
+		<%if @show_brain_tree != false%>
+			<script src="https://js.braintreegateway.com/js/braintree-2.27.0.min.js"></script>
+			<script>
+			// We generated a client token for you so you can test out this code
+			// immediately. In a production-ready integration, you will need to
+			// generate a client token on your server (see section below).
+			var clientToken = '<%=@client_token%>';
 
-		<script src="https://js.braintreegateway.com/js/braintree-2.27.0.min.js"></script>
-		<script>
-		// We generated a client token for you so you can test out this code
-		// immediately. In a production-ready integration, you will need to
-		// generate a client token on your server (see section below).
-		var clientToken = '<%=@client_token%>';
-
-		braintree.setup(clientToken, "dropin", {
-		  container: "payment-form"
-		});
-		</script>
+			braintree.setup(clientToken, "dropin", {
+			  container: "payment-form"
+			});
+			</script>
 		<%end%>
 </div>
