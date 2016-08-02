@@ -54,7 +54,7 @@ def payment
 end
 
 def checkout
-  if params['show_brain_tree'] == 'false'
+  if params['page'] == 'bus'
     redirect_to "/success"
     return
   end
