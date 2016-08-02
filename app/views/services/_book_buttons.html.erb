@@ -1,9 +1,14 @@
 
 <center>
+	<%= form_tag "/book", :method => :post, :class => "form-inline book-form" do %>
+		<%=select_tag "colors", "<option>0-10 miles</option><option>11-25 miles</option><option>26-30 miles</option>".html_safe, :class=> 'form-control price-select'%>
+		<%= text_field_tag :url, "", class: 'form-control ', value: request.original_fullpath %>
+		<%= text_field_tag :page, "", class: 'form-control ', value: @page %>
+		<button class="btn btn-primary btn-book-page" type="submit" value ="search"> Book now</button>
 
-	<%=select_tag "colors", "<option>0-10 miles</option><option>11-25 miles</option><option>26-30 miles</option>".html_safe, :class=> 'form-control price-select'%>
-	<a href = "/book?page=<%=@page%>&url=<%=request.original_fullpath%>" class="   btn btn-primary fair-estimate-button" type="submit" value ="fair estimate">Book now </a>
-	<a href = "/fair-estimate?page=<%=@page%>&url=<%=request.original_fullpath%>" class=" btn btn-primary  fair-estimate-button" type="submit" value ="fair estimate">GET FAIR ESTIMATE </a>
+		<a href = "/book?page=<%=@page%>&url=<%=request.original_fullpath%>" class=" hidden  btn btn-primary fair-estimate-button" type="submit" value ="fair estimate">Book now </a>
+		<a href = "/fair-estimate?page=<%=@page%>&url=<%=request.original_fullpath%>" class=" hidden btn btn-primary  fair-estimate-button hidden" type="submit" value ="fair estimate">GET FAIR ESTIMATE </a>
+	<%end%>
 </center>
 
 <!--
