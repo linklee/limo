@@ -69,4 +69,5 @@ Rails.application.routes.draw do
   get 'payment' => 'static_pages#payment'
   post 'checkout' => 'static_pages#checkout'
   get 'success' => 'static_pages#success'
+  get 'save_client' => 'static_pages#save_client'
 end

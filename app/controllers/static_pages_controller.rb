@@ -54,6 +54,7 @@ def payment
 end
 
 def checkout
+
   nonce = params[:payment_method_nonce]
   render action: :payment and return unless nonce
   result = Braintree::Transaction.sale(
@@ -69,7 +70,9 @@ def checkout
   end
 #end checkout function
 end
-
+def save_client 
+    render "payment/success"
+end
 def success 
   render "payment/success"
 end
