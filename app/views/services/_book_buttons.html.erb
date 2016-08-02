@@ -1,20 +1,28 @@
-
-<center>
-	<%= form_tag "/book", :method => :get, :class => "form-inline book-form" do %>
-		<%= render "services/select_s"%>
-		<%= text_field_tag :url, "", class: 'form-control hidden', value: request.original_fullpath %>
-		<%= text_field_tag :page, "", class: 'form-control hidden', value: @page %>
-		 <%if params['page'] == 'bus'%>
+ <%if params['page'] == 'bus'%>
+ <center>
+		<%= form_tag "/save_client", :method => :get, :class => "form-inline book-form" do %>
+			<%= text_field_tag :url, "", class: 'form-control hidden', value: request.original_fullpath %>
+			<%= text_field_tag :page, "", class: 'form-control hidden', value: @page %>
+			<button class="btn btn-primary btn-book-page" type="submit" value ="search"> Book now</button>
+		<%end%>
+ </center>
 		 <%= text_field_tag :show_brain_tree, "", class: 'form-control hidden', value: 'false' %>
 
-		 <%end%>
-		<button class="btn btn-primary btn-book-page" type="submit" value ="search"> Book now</button>
+<%else%>
+	<center>
+		<%= form_tag "/book", :method => :get, :class => "form-inline book-form" do %>
+			<%= render "services/select_s"%>
+			<%= text_field_tag :url, "", class: 'form-control hidden', value: request.original_fullpath %>
+			<%= text_field_tag :page, "", class: 'form-control hidden', value: @page %>
 
-		<a href = "/book?page=<%=@page%>&url=<%=request.original_fullpath%>" class=" hidden  btn btn-primary fair-estimate-button" type="submit" value ="fair estimate">Book now </a>
-		<a href = "/fair-estimate?page=<%=@page%>&url=<%=request.original_fullpath%>" class=" hidden btn btn-primary  fair-estimate-button hidden" type="submit" value ="fair estimate">GET FAIR ESTIMATE </a>
-	<%end%>
-</center>
+			<button class="btn btn-primary btn-book-page" type="submit" value ="search"> Book now</button>
 
+			<a href = "/book?page=<%=@page%>&url=<%=request.original_fullpath%>" class=" hidden  btn btn-primary fair-estimate-button" type="submit" value ="fair estimate">Book now </a>
+			<a href = "/fair-estimate?page=<%=@page%>&url=<%=request.original_fullpath%>" class=" hidden btn btn-primary  fair-estimate-button hidden" type="submit" value ="fair estimate">GET FAIR ESTIMATE </a>
+		<%end%>
+	</center>
+
+<%end%>
 <!--
 <center>
 	<= form_tag "/", :method => :get, :class => "form-inline " do >
