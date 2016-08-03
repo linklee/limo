@@ -65,6 +65,9 @@
 			max-width:125px!important;
 			min-width: 0px!important;
 		}
+		.book-price-change {
+			width:420px;
+		}
 
 	}
 	@media (min-width: 1200px) {

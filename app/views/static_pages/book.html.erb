@@ -99,7 +99,7 @@
 			
 				<div id="payment-form" class="payment-form"></div><br>
 				Deposit or full amount in $<br>
-				<%= text_field_tag :price, "", type:"number", class: 'form-control book-input boo-time', placeholder: 'Deposit or full amount in $', value: params['price'] %>
+				<%= text_field_tag :price, "", type:"number", class: 'form-control book-input boo-time book-price-change', placeholder: 'Deposit or full amount in $', value: params['price'] %>
 				<b class="hidden">Total: $<%=params['price']%></b><br><br>
 		<%end%>		
 				<button class="btn btn-primary btn-book-page" type="submit" value ="search"> Book now</button>
