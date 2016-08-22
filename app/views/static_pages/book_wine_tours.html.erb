@@ -2,9 +2,9 @@
 	<ol class="breadcrumb show-b">
 		<li><a href="/">      
 			Home</a></li>
-			<li class="up"><a href="<%=params[:url]%>" class="up">		<%= params[:page].capitalize%>      
+			<li class="up"><a href="/wine-tours" class="up">Wine tours
 			</a></li>
-			<li>Book</li>      
+			<li> <%= params[:page].capitalize%> </li>      
 		</ol>
 		<h1 class="left-align"> Enter details below </h1>
 
@@ -19,23 +19,7 @@
 				<%= text_field_tag :phone, "", class: 'form-control book-input', placeholder: 'phone', required: true   %>
 			</div>
 		</div><br>
-		<div class="row">
-			<div class="col-md-2 book-input-wrap">
-				<select class="form-control book-input select-book-type" id="sel1">
-					<option selected>Select service type</option>
-					<option value="Pickup from Airport">Pickup from Airport</option>
-					<option value="Drop off to Airport">Drop off to Airport</option>
-					<option value="Airport Round Trip">Airport Round Trip</option>
-					<option value="Book by the Hour">Book by the Hour</option><option value="Address to Address One Way">Address to Address One Way</option>
-					<option value="Address to Address Round Trip">Address to Address Round Trip</option>
-				</select>
-
-			</div>
-
-			<div class="col-md-2 book-input-wrap">
-				<%= text_field_tag :phone, "",type:"number", class: 'form-control book-input', placeholder: 'Number of passengers' %>
-			</div>
-		</div>
+		
 		<div class ="row ">
 			<div class="col-md-2 book-input-wrap pick-up-wrap hidden">
 				<%= text_field_tag :phone, "",type:"text", class: 'form-control book-input', placeholder: 'Pickup-up location' %>
@@ -45,37 +29,7 @@
 			</div>
 			
 		</div>
-		<div class="row book-hour-wrap hidden">
-		<div class="col-md-2  ">
-			<%= text_field_tag :phone, "",type:"number", class: 'form-control book-input', placeholder: 'Number of hours' %>
-		</div>
-		</div>
-		<div class="row airport-wrap hidden">
-			<div class="col-md-2 book-input-wrap">
-				<select class="form-control book-input select-book" id="sel1">
-					<option selected>Select airport</option>
-					<option value="Pickup from Airport">LAX</option>
-					<option value="Drop off to Airport">BURBANK</option>
-					<option value="Airport Round Trip">LONG BEACH</option>
-					<option value="Book by the Hour">VAN NUYS</option><option value="Address to Address One Way">JOHN WAYNE</option>
-				</select>
-			</div>
-		</div>
-		<div class ="row">
-			<div class="col-md-2 book-input-wrap">
-			<%= text_field_tag :luggage, "",type:"text", class: 'form-control book-input', placeholder: 'Amount of luggage' %>
-				<select class="form-control book-input select-book hidden" id="sel1">
-					<option value="Pickup from Airport">No luggage</option>
-					<option value="Drop off to Airport">Small amount of luggage</option>
-					<option value="Airport Round Trip">Big amount of luggage</option>
-
-				</select>
-			</div>
-			
-			<div class="col-md-2 book-input-wrap">
-				<%= text_field_tag :phone, "",type:"number", class: 'form-control book-input', placeholder: 'Number of stops' %><br><br>
-			</div>
-		</div>
+		
 		<div class ="row">
 			<div class="col-md-2 book-input-wrap">
 				<span > Pickup-up date</span><br>
@@ -96,8 +50,7 @@
 		</div>
 		<br>
 		<%if @show_brain_tree != false%>
-			 
-
+			
 				<div id="payment-form" class="payment-form"></div><br>
 				<% if !flash.empty? %>
 					<div id="flash" class="book-alert alert-danger"> 
@@ -109,7 +62,7 @@
 					</div>
 				<% end %>
 				Deposit or full amount in $<br>
-				<%= text_field_tag :price, "", type:"number", class: 'form-control book-input boo-time book-price-change', placeholder: 'Deposit or full amount in $', value: params['price'],  min: '1' , required: true %>
+				<%= text_field_tag :price, "", type:"number", class: 'form-control book-input boo-time book-price-change', placeholder: 'Deposit or full amount in $', value: params['price'] , required: true %>
 				<b class="hidden">Total: $<%=params['price']%></b><br><br>
 		<%end%>		
 				<button class="btn btn-primary btn-book-page" type="submit" value ="search"> Book now</button>
@@ -120,7 +73,7 @@
 
 				<%end%>
 
-				  
+				 
 
 		<%if @show_brain_tree != false%>
 			<script src="https://js.braintreegateway.com/js/braintree-2.27.0.min.js"></script>

@@ -3,13 +3,13 @@
   <input type="submit" value="Pay $10">
 </form>
 <% if !flash.empty? %>
-<div id="flash"> 
+<div id="flash" class="alert alert-danger"> 
     <% flash.keys.each do |k| %> 
       <div class="<%= k %>">
         <%= flash[k] %>
       </div>  
     <% end %>   
-  </div>
+</div>
 <% end %>   
 
 <script src="https://js.braintreegateway.com/js/braintree-2.27.0.min.js"></script>

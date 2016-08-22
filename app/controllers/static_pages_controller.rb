@@ -19,6 +19,9 @@ def book
     @show_brain_tree = false 
   end
 end
+def book_wine_tours
+  @client_token = Braintree::ClientToken.generate
+end
 def rv 
   @page = "rv"
   render "services/_rv"
@@ -66,12 +69,11 @@ def checkout
     )
 
   if result.success?
-    flash[:notice] = "Sale successful." 
+    #flash[:notice] = "Sale successful." 
     redirect_to "/success"
   else 
-    
-    flash[:alert] = "Something is wrong. #{result.transaction.processor_response_text}"
-    payment
+    flash[:alert] = "Something is wrong. #{result.message}"  
+    redirect_to request.referrer
   end
 #end checkout function
 end

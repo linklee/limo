@@ -71,5 +71,6 @@ Rails.application.routes.draw do
   get 'success' => 'static_pages#success'
   get 'checkout_bus' => 'static_pages#checkout_bus'
   get 'wine-tours' => 'static_pages#wine_tours'
+  get 'book-tour' => 'static_pages#book_wine_tours'
 
 end
