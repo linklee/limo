@@ -75,11 +75,12 @@
 		.book-price-change {
 			width: 400px!important;
 		}
+		.btn-book-page {
+			width:400px;
+		}
 
 	}
 	@media (min-width: 1200px) {
 	
-		.btn-book-page {
-			width:400px;
-		}
+		
 	}
