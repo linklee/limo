@@ -14,10 +14,20 @@
 					<li><a href="#">Stretch Limo</a></li>
 					<li><a href="#">7 passenger Van</a></li>
 					<li><a href="#">Party bus</a></li>
+					<li>	<% if user_signed_in? %>
+					<li role="separator" class="divider"></li>
+					<li class="dropdown-header">Admin Dashboard</li>
+					<li><a href="/cars">Cars</a></li>
+
+  					<li>		<%= link_to('Logout', destroy_user_session_path, :method => :delete) %> 
+						<% end %>
+					</li>
 				</ul>
 			</li>
 		</ul>
-		<ul class= " nav nav-center"><a class= " logo" href = "/">GO LIMO 24</a> <br/>  <span class="hidden under-logo"> car services </span></ul>
+		<ul class= " nav nav-center"><a class= " logo" href = "/">GO LIMO 24</a>
+	
+	 <br/>  <span class="hidden under-logo"> car services </span></ul>
 		<ul class="nav navbar-nav navbar-right">
 			<li class="phone"><i class="fa fa-mobile"></i> 818-844-7529</li>
 		</ul>

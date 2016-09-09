@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descr:</strong>
+  <%= @car.descr %>
+</p>
+
+<p>
+  <strong>Small photo:</strong>
+  <%= @car.small_photo %>
+</p>
+
+<p>
+  <strong>Big photo:</strong>
+  <%= @car.big_photo %>
+</p>
+
+<p>
+  <strong>Price1:</strong>
+  <%= @car.price1 %>
+</p>
+
+<p>
+  <strong>Price2:</strong>
+  <%= @car.price2 %>
+</p>
+
+<p>
+  <strong>Integer:</strong>
+  <%= @car.integer %>
+</p>
+
+<p>
+  <strong>Price3:</strong>
+  <%= @car.price3 %>
+</p>
+
+<p>
+  <strong>Article:</strong>
+  <%= simple_format @car.article %>
+</p>
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>

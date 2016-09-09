@@ -1,0 +1,53 @@
+<%= form_for(@car) do |f| %>
+  <% if @car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@car.errors.count, "error") %> prohibited this car from being saved:</h2>
+
+      <ul>
+      <% @car.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :small_photo %><br>
+    <%= f.text_field :small_photo %>
+  </div>
+  <div class="field">
+    <%= f.label :big_photo %><br>
+    <%= f.text_field :big_photo %>
+  </div>
+  <div class="field">
+    <%= f.label :price1 %><br>
+    <%= f.number_field :price1 %>
+  </div>
+  <div class="field">
+    <%= f.label :price2 %><br>
+    <%= f.number_field :price2 %>
+  </div>
+ 
+  <div class="field">
+    <%= f.label :price3 %><br>
+    <%= f.number_field :price3 %>
+  </div>
+  <div class="field">
+    <%= f.label :article %><br>
+    <%= f.text_area :article, :class => "text-area"%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<style>
+.text-area {
+  width:100%;
+  height:300px;
+}
+</style>
