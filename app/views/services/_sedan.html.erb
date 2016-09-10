@@ -5,7 +5,7 @@
 	</ol>
 	<%= render 'services/menu' %>
 	<br>
-	<h1>Sedan service</h1>
+	<h1><%=@car.name%></h1>
 	<div class="col-md-6  prop-table"> 
 		<table class="table  table-striped table-bordered">
 		
@@ -22,17 +22,14 @@
 			<tr>
 				<td>Hourly rate:</td>
 
-				<td class="price-table">$49/hr</td>
+				<td class="price-table">$<%=@car.price1%>/hr</td>
 			</tr>
 		</table>
 
 
 	</div>
-	<div class="col-md-6 img-wrap"><img class="img-responsive" src ="http://carrrsmag.com/data_images/models/lincoln-town-car/lincoln-town-car-04.jpg"/> </div>
+	<div class="col-md-6 img-wrap"><img class="img-responsive"  src = <%=@car.big_photo%>/> </div>
 	<%= render "services/book_buttons"%>
 	<br><br>
-	<%= render "services/main_article"%>
-
-	<p> GO LIMO 24 car service offers the latest models of luxury vehicles for your most comfortable driving experience. Our drivers priority is your safety and comfort. Our private car service is known for taking you to your destination in style, safely and in a timely manner. Each vehicle is equipped with top safety features and is insured for passenger transportation.
-	</p>
+	<%=raw @car.article%>
 </div>

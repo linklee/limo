@@ -22,25 +22,22 @@
 			</tr>
 			<tr>
 				<td>0-10 miles</td>
-				<td class="price-table">$149</td>
+				<td class="price-table">$<%=@car.price1%></td>
 			</tr>
 			<tr>
 				<td>11-25 miles</td>
-				<td class="price-table">$187</td>
+				<td class="price-table">$<%=@car.price2%></td>
 			</tr>
 			<tr>
 				<td>26-30 miles</td>
-				<td class="price-table">$209</td>
+				<td class="price-table">$<%=@car.price3%></td>
 			</tr>
 		</table>
 
 
 	</div>
-	<div class="col-md-6 img-wrap"><img class="img-responsive limo-img-big" src ="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSyHmOE0Dqj-cYHQ2QlHV5gC-MHRHq-KZoVJm6CVQHfQWmDuB9o"/> </div>
+	<div class="col-md-6 img-wrap"><img class="img-responsive" src = <%=@car.big_photo%>/> </div>
 	<%= render "services/book_buttons"%>
 	<br><br>
-	<%= render "services/main_article"%>
-
-	<p> GO LIMO 24 car service offers the latest models of luxury vehicles for your most comfortable driving experience. Our drivers priority is your safety and comfort. Our private car service is known for taking you to your destination in style, safely and in a timely manner. Each vehicle is equipped with top safety features and is insured for passenger transportation.
-	</p>
+	<%=raw @car.article%>
 </div>

@@ -1,20 +1,10 @@
-<% if @page == "suv"%>
-<!--suv-->
-<%=select_tag "price", "<option value='65'>0-10 miles</option><option value='75'>11-25 miles</option><option value='89'>26-30 miles</option>
-	<option value=''>other</option>".html_safe, :class=> 'form-control price-select'%>
-<%end%>
-<% if @page == "limo"%>
-<!--stretch limo-->
-<%=select_tag "price", "<option value='149'>0-10 miles</option><option value='187'>11-25 miles</option><option value='209'>26-30 miles</option>
-	<option value=''>other</option>".html_safe, :class=> 'form-control price-select'%>
-<%end%>
-<% if @page == "7 passenger Van"%>
-<!--7 passenger Van-->
-<%=select_tag "price", "<option value='85'>0-10 miles</option><option value='100'>11-25 miles</option><option value='140'>26-30 miles</option>
-	<option value=''>other</option>".html_safe, :class=> 'form-control price-select', :required => true%>
-<%end%>
-<% if @page == "sedan"%>
-<!--Sedan-->
 
-<%= text_field_tag :price, "", class: 'form-control price-select-input price-select', placeholder: 'Hours', type: 'number', required: 'required' %>
+<% if @page == "sedan"%>
+	<!--Sedan-->
+	<%= text_field_tag :price, "", class: 'form-control price-select-input price-select', placeholder: 'Hours', type: 'number', required: 'required' %>
+<% elsif @page != "bus" and @page != "rv"%>
+	<%=select_tag "price",
+	 "<option value=#{@car.price1}>0-10 miles</option><option value=#{@car.price2}>11-25 miles</option><option value=#{@car.price3}>26-30 miles</option>
+		<option value=''>other</option>"
+		.html_safe, :class=> 'form-control price-select', :required => true%>
 <%end%>

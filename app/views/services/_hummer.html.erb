@@ -5,7 +5,7 @@
 	</ol>
 	<%= render 'services/menu' %>
 	<br>
-	<h1>7 passenger Van service</h1>
+	<h1><%=@car.name%></h1>
 	<div class="col-md-6  prop-table"> 
 		<table class="table  table-striped table-bordered">
 			
@@ -21,26 +21,22 @@
 			</tr>
 			<tr>
 				<td>0-10 miles</td>
-				<td class="price-table">$85</td>
+				<td class="price-table">$<%=@car.price1%></td>
 			</tr>
 			<tr>
 				<td>11-25 miles</td>
-				<td class="price-table">$100</td>
+				<td class="price-table">$<%=@car.price2%></td>
 			</tr>
 			<tr>
 				<td>26-30 miles</td>
-				<td class="price-table">$140</td>
+				<td class="price-table">$<%=@car.price3%></td>
 			</tr>
 		</table>
 
 
 	</div>
-	<div class="col-md-6 img-wrap">
-	<img class="img-responsive van-big-img" src ="http://i.imgur.com/Th33APb.png?1"/> </div>
+	<div class="col-md-6 img-wrap"><img class="img-responsive" src = <%=@car.big_photo%>/> </div>
 	<%= render "services/book_buttons"%>
 	<br><br>
-	<%= render "services/main_article"%>
-
-	<p> GO LIMO 24 car service offers the latest models of luxury vehicles for your most comfortable driving experience. Our drivers priority is your safety and comfort. Our private car service is known for taking you to your destination in style, safely and in a timely manner. Each vehicle is equipped with top safety features and is insured for passenger transportation.
-	</p>
+	<%=raw @car.article%>
 </div>

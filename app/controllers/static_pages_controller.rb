@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
 end
 def sedan
   @page = "sedan"
+  @car = Car.sedan
   render "services/_sedan"
 end
 def book 
@@ -13,9 +14,9 @@ def book
   end
   @client_token = Braintree::ClientToken.generate
   if params['page'] == 'sedan'
-    params['price'] = params['price'].to_i * 49 
+    params['price'] = params['price'].to_i * Car.sedan.price1 
   end
-  if params['page'] == 'bus'
+  if params['page'] == 'bus' or params['page'] == 'rv'
     @show_brain_tree = false 
   end
 end
@@ -24,6 +25,7 @@ def book_wine_tours
 end
 def rv 
   @page = "rv"
+  @car = Car.rv
   render "services/_rv"
 end
 def estimate 
@@ -31,22 +33,23 @@ def estimate
 end
 def suv 
  @page = "suv"
-
+ @car = Car.suv
  render "services/_suv"
-
 end
 def limo 
   @page = "limo"
-
+  @car = Car.limo
   render "services/_limo"
 end
 def hummer 
   @page= "7 passenger Van"
+  @car = Car.van
   render "services/_hummer"
 end
 
 def bus 
   @page = "bus"
+  @car = Car.bus
   render "services/_bus"
 end
 
