@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
 
  def home
+  @cars = Car.all
   render "index"
 end
 def sedan

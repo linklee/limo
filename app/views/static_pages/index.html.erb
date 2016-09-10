@@ -1,130 +1,24 @@
 <div class="row">
-
 	<h1 class = "main-header ">L.A car services</h1>
-	<!--suv!-->
+	<% @cars.each do |car|%>
 		<div class="col-md-4 ">
 			<div class="thumbnail product-wrap" >
 				<div class="small-img-wrap">
-					<a  href="/suv" title= "">
-						<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ6XNEP1o97GArvh7rk8hf7m0j0axfPpcUUAalHJ6CrEOAySN1vSQ" alt="" > 
+					<a  href="/suv" title= <%=car.name%> >
+						<img src=<%=car.small_photo%> alt=<%=car.name%> > 
 					</a>
-					</div>
+				</div>
 				<div class="caption">
 					<h4 class="">
-						<a  href="/suv" title= "">SUV</a><br>
-							<div class="hidden">
-							<b class="firstb">$65</b>   0-10 miles<br/> 
-							<b>$75</b>   11-25 miles<br/>
-							<b>$89</b>   26-30 miles<br/>
-							</div>
+						<a  href=<%=car.url%> title= ""><%=car.name%> </a><br>
 					</h4>
 					<div class="product-text "><a href = "/suv" class=" btn btn-primary" t value ="book">price and info </a></div>
 				</div>
 			</div>
 		</div>
-		
-		<!--sedan!-->
-		<div class="col-md-4 padding-top">
-			<div class="thumbnail product-wrap" >
-				<div class="small-img-wrap">
-					<a  href="/sedan" title= "">
-						<img src="http://carrrsmag.com/data_images/models/lincoln-town-car/lincoln-town-car-04.jpg" alt="" > 
-					</a>
-				</div>
-				<div class="caption">
-					<h4 class=""><a href="/sedan">Sedan</a><br>
-					<div class="hidden">
-
-						<b>$49/hour*</b>
-					</div>
-					</h4>
-
-					<div class="product-text ">
-						<a href = "/sedan" class=" btn btn-primary"  value ="book">price and info </a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--end sedan!-->
-		
-		<!-- 7 passenger Van!-->
-		<div class="col-md-4 ">
-			<div class="thumbnail product-wrap" >
-				<div class="small-img-wrap">
-					<a  href="/hummer" title= "">
-						<img src="http://i.imgur.com/Th33APb.png?1" alt="" > 
-					</a>
-				</div>
-				<div class="caption">
-					<h4 >
-						<a  href="/hummer" title= "">7 passenger van</a><br>
-						<div class="hidden">
-
-						<b class="firstb">$169</b>   0-10 miles <br/> 
-						<b>$185</b>   11-25 miles <br/>
-						<b>$209</b>   26-30 miles  <br/>
-						</div>
-					</h4>
-					<div class="product-text "><a href = "/hummer" class=" btn btn-primary"  value ="book">price and info </a></div>
-				</div>
-			</div>
-		</div>
-		<!-- end 7 passenger Van!-->
+	<%end%>
 </div>
-<div class="row ">
-		<!-- party bus!-->
-		<div class="col-md-4 padding-top ">					
-			<div class="thumbnail product-wrap" >
-				<div class="small-img-wrap">
-					<a  href="/party-bus" title= "">
-						<img src="http://www.lapartybus.com/images/the-presidential-crop-u9127.png" alt="" > 
-					</a>
-				</div>
-				<div class="caption">
-					<h4 class="">
-					<a  href="/party-bus" title= "">Party bus </a> <br>
-					<div class="hidden">
-
-						please call for pricing
-					</div>
-					</h4>
-
-
-					<div class="product-text "><a href = "/party-bus" class=" btn btn-primary" t value ="book">price and info </a></div>
-				</div>
-			</div>
-		</div>
-		<!--end party bus!-->
-
-		<!-- stretch limo-->
-		<div class="col-md-4 ">
-			<div class="thumbnail product-wrap" >
-				<div class="small-img-wrap">
-					<a  href="/limo" title= "">
-						<img src="http://wac.2c1f.edgecastcdn.net/002C1F/limo/stretchlimo.jpg" alt="" class="limo-img" > 
-					</a>
-				</div>
-				<div class="caption">
-					<h4 class="">
-						<a href = "/limo" class="">Stretch Limo</a><br>
-						<div class="hidden">
-
-						<b class="firstb">$149 </b>   0-10 miles <br/> 
-						<b>$187</b>   11-25 miles <br/>
-						<b>$209</b>   26-30 miles  <br/>
-						</div>
-					</h4>
-
-					<div class="product-text "><a href = "/limo" class=" btn btn-primary"  value ="book">price and info </a></div>
-				</div>
-			</div>
-		</div>
-		<!--end stretch limo!-->
-				
-
-</div>
-
+<br><br>
 <%= render 'static_pages/pluses_block' %>
-
 
 <%= render 'static_pages/contacts' %>
