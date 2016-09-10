@@ -7,8 +7,8 @@
     <tr>
       <th>id</th>
       <th>name</th>
-      <th>Small photo</th>
-      <th>Big photo</th>
+      <th class="hidden">Small photo</th>
+      <th class="hidden">Big photo</th>
       <th>Price1</th>
       <th>Price2</th>
       <th>Price3</th>
@@ -22,8 +22,8 @@
       <tr>
         <td><%= car.id %></td>
         <td><%= car.name %></td>
-        <td><%= car.small_photo %></td>
-        <td><%= car.big_photo %></td>
+        <td class="short-td hidden"><%= car.small_photo %></td>
+        <td class="short-td hidden"><%= car.big_photo %></td>
         <td><%= car.price1 %></td>
         <td><%= car.price2 %></td>
         <td><%= car.price3 %></td>
