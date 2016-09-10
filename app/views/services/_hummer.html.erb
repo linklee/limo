@@ -6,6 +6,9 @@
 	<%= render 'services/menu' %>
 	<br>
 	<h1><%=@car.name%></h1>
+	<% if user_signed_in? %>
+		<%= link_to('edit', "cars/#{@car.id}/edit", :method => :get) %> 
+	<% end %>
 	<div class="col-md-6  prop-table"> 
 		<table class="table  table-striped table-bordered">
 			
