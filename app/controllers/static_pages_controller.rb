@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
 
  def home
-  @cars = Car.all.order("id DESC")
+  @cars = Car.all.order("id")
   render "index"
 end
 def sedan
