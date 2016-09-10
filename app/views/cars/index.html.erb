@@ -7,12 +7,12 @@
     <tr>
       <th>id</th>
       <th>name</th>
-      <th class="hidden">Small photo</th>
+      <th class="">Small photo </th>
       <th class="hidden">Big photo</th>
       <th>Price1</th>
       <th>Price2</th>
       <th>Price3</th>
-      <th>Article</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,15 +22,15 @@
       <tr>
         <td><%= car.id %></td>
         <td><%= car.name %></td>
-        <td class="short-td hidden"><%= car.small_photo %></td>
+        <td class="short-td "><img style="width:150px;" src=<%= car.small_photo %> ></td>
         <td class="short-td hidden"><%= car.big_photo %></td>
         <td><%= car.price1 %></td>
         <td><%= car.price2 %></td>
         <td><%= car.price3 %></td>
-        <td><%= car.article %></td>
-        <td><%= link_to 'Show', car %></td>
+
+        <td><%= link_to 'Show', car.url %></td>
         <td><%= link_to 'Edit', edit_car_path(car) %></td>
-        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
       </tr>
     <% end %>
   </tbody>

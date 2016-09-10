@@ -16,11 +16,11 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :small_photo %><br>
+    <%= f.label "small photo (appears on the main page)"%><br>
     <%= f.text_field :small_photo %>
   </div>
   <div class="field">
-    <%= f.label :big_photo %><br>
+    <%= f.label "big photo (appears on the car page)" %><br>
     <%= f.text_field :big_photo %>
   </div>
   <div class="field">
@@ -46,4 +46,9 @@
     <%= f.submit %>
   </div>
 <% end %>
-
+<style>
+  input {
+    min-width:400px;
+  }
+</style>
+<h2>Instruction</h2>

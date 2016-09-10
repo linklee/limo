@@ -8,20 +8,22 @@
 					<li class="hidden"><a href="#">About</a></li>
 					<li class="hidden"><a href="#">Contacts</a></li>
 					<li role="separator" class="divider"></li>
-					<li class="dropdown-header">Car service</li>
-					<li><a href="#">Sedan</a></li>
-					<li><a href="#">Suv</a></li>
-					<li><a href="#">Stretch Limo</a></li>
-					<li><a href="#">7 passenger Van</a></li>
-					<li><a href="#">Party bus</a></li>
-					<li>	<% if user_signed_in? %>
+					<li class="dropdown-header">Car services</li>
+					<li><a href="sedan">Sedan</a></li>
+					<li><a href="suv">Suv</a></li>
+					<li><a href="limo">Stretch Limo</a></li>
+					<li><a href="hummer">7 passenger Van</a></li>
+					<li><a href="bus">Party bus</a></li>
+					<li><a href="rv">RV</a></li>
+					<% if user_signed_in? %>
+					
 					<li role="separator" class="divider"></li>
 					<li class="dropdown-header">Admin Dashboard</li>
 					<li><a href="/cars">Cars</a></li>
 
   					<li>		<%= link_to('Logout', destroy_user_session_path, :method => :delete) %> 
-						<% end %>
-					</li>
+					<% end %>
+					
 				</ul>
 			</li>
 		</ul>
