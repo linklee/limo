@@ -28,6 +28,7 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'nokogiri'
 gem 'braintree'
+gem 'ckeditor', github: 'galetahub/ckeditor' 
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

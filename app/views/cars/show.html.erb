@@ -26,18 +26,13 @@
 </p>
 
 <p>
-  <strong>Integer:</strong>
-  <%= @car.integer %>
-</p>
-
-<p>
   <strong>Price3:</strong>
   <%= @car.price3 %>
 </p>
 
 <p>
   <strong>Article:</strong>
-  <%= simple_format @car.article %>
+  <%= raw @car.article %>
 </p>
 
 <%= link_to 'Edit', edit_car_path(@car) %> |

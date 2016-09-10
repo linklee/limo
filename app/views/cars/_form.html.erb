@@ -38,16 +38,12 @@
   </div>
   <div class="field">
     <%= f.label :article %><br>
-    <%= f.text_area :article, :class => "text-area"%>
+    <%= f.cktext_area :article, class: 'someclass', ckeditor: { language: 'en'}%>
+
+    <%# f.text_area :article, :class => "text-area"%>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
 
-<style>
-.text-area {
-  width:100%;
-  height:300px;
-}
-</style>
