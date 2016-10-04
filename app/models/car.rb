@@ -1,5 +1,5 @@
 class Car < ActiveRecord::Base
-	#here we have hardcoded cars - bad but it works, may be later rewrite and find by names 
+	#here we have hardcoded cars - bad but it works, may be later rewrite and find by names if i get paid more
 	
 	def self.suv
 	  find(1)
